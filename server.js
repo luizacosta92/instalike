@@ -10,6 +10,7 @@ const posts = [{ id: 1, descricao: "Foto de amsterdan", imgUrl: "https://i.ibb.c
 
 // Cria uma instância do servidor Express.
 const app = express();
+app.use(express.static("uploads"))
 routes(app);
 
 // Inicia o servidor na porta 3000 e imprime uma mensagem no console.
