@@ -1,6 +1,12 @@
 import express from "express";
 import multer from "multer";
+import cors from "cors";
 import { listarPosts, postarNovoPost, uploadImagem, atualizarNovoPost } from "../controllers/postsController.js";
+
+const corsOptions = {
+  origin: "http://localhost:8000", 
+  optionsSuccessStatus: 200,
+}
 
 // Configura o armazenamento de arquivos utilizando o multer.
 // Os arquivos serão armazenados na pasta 'uploads'.
@@ -20,6 +26,7 @@ const upload = multer({ dest: "./uploads", storage });
 const routes = (app) => {
     // Permite que o servidor interprete o corpo das requisições como JSON.
     app.use(express.json());
+    app.use(cors(corsOptions));
 
     // Rota para buscar todos os posts.
     // Chama a função `listarPosts` no controlador para obter todos os posts.
