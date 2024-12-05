@@ -1,4 +1,4 @@
-# Instabytes
+# Instalike
 
 Instabytes é uma aplicação simples de backend para gerenciar posts com imagens, utilizando JavaScript e MongoDB. A aplicação foi desenvolvida durante um programa de imersão e possui funcionalidades básicas como upload de imagens, geração de descrições automáticas para as imagens e operações em um banco de dados.
 
